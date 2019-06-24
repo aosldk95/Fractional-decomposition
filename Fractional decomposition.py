@@ -2,12 +2,13 @@
 #600851475143 의 최대 소인수는 무엇입니까?
 number = 600851475143
 numberlist = []
-for i in range(2,number) :
+i = 2
+while i < number+1 :
     if (number % i) == 0 :
         numberlist.append(i)
         number /= i
-        if number == 1 :
-            break
-        
+        i = 2
+    else :
+        i += 1   
 print(max(numberlist))
             
