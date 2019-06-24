@@ -5,12 +5,9 @@ numberlist = []
 for i in range(2,number) :
     if (number % i) == 0 :
         numberlist.append(i)
-        print(numberlist)
-for i in numberlist :
-    for j in range(2,i):
-        if (i % j) == 0 :
-            print(1)
-            numberlist[numberlist.index(i)] = 0
+        number /= i
+        if number == 1 :
             break
+        
 print(max(numberlist))
             
